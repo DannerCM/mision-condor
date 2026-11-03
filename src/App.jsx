@@ -36,6 +36,7 @@ export default function App() {
           <meshStandardMaterial color="#555" />
         </mesh>
 
+        <Zonas />
         <Jugador jugadorRef={jugadorRef} alLlegar={() => setGano(true)} />
 
         <Obstaculo z={4} velocidad={1} jugadorRef={jugadorRef} alChocar={morir} />

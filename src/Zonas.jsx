@@ -4,7 +4,7 @@ export default function Zonas() {
     <>
       {/* Punto A: donde empieza el jugador */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 8]}>
-        <planeGeometry args={[10, 2]} />
+        <planeGeometry args={[10, 5]} />
         <meshStandardMaterial color="green" />
       </mesh>
 
