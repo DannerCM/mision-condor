@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import { KeyboardControls } from '@react-three/drei'
 import Jugador from './Jugador'
 import Obstaculo from './Obstaculo'
+import Zonas from './Zonas'
+import Marcador from './Marcador'
 
 // Que tecla hace que cosa
 const teclas = [
@@ -41,7 +43,7 @@ export default function App() {
         <Obstaculo z={-4} velocidad={3} jugadorRef={jugadorRef} alChocar={morir} />
       </Canvas>
 
-      {/* Diego: aca va el marcador, con muertes={muertes} y gano={gano} */}
+    <Marcador muertes={muertes} gano={gano} />
     </KeyboardControls>
   )
 }
