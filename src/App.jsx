@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { KeyboardControls } from '@react-three/drei'
 import Jugador from './Jugador'
+import Obstaculo from './Obstaculo'
 
 // Que tecla hace que cosa
 const teclas = [
@@ -35,7 +36,9 @@ export default function App() {
 
         <Jugador jugadorRef={jugadorRef} alLlegar={() => setGano(true)} />
 
-        {/* Yuri: aca van los obstaculos, con alChocar={morir} */}
+        <Obstaculo z={4} velocidad={1} jugadorRef={jugadorRef} alChocar={morir} />
+        <Obstaculo z={0} velocidad={2} jugadorRef={jugadorRef} alChocar={morir} />
+        <Obstaculo z={-4} velocidad={3} jugadorRef={jugadorRef} alChocar={morir} />
       </Canvas>
 
       {/* Diego: aca va el marcador, con muertes={muertes} y gano={gano} */}
